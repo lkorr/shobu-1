@@ -205,7 +205,6 @@ class Board:
         updated_board = np.copy(self.board)
         opponent = 'b' if color == 'w' else 'w'
         vector = self.get_vector(init_stone, init_move)
-        print('vector: ' + str(vector))
         unit_vector = np.array(self.generate_unit_vector(vector))
         sub_board = init_stone[0]
         legal = self.passive_aggressive(color, init_stone, init_move, aggro_stone, vector, unit_vector, opponent,
